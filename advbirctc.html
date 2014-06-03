@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <title>Advance IRCTC booking dates </title>
+        <link href="favicon.png" rel="icon"></link>
+        <link href="style.css" type="text/css" rel="stylesheet"></link>
+        <link href="media.css" type="text/css" rel="stylesheet"></link>
+    </head>
+<body>
+    
+    <div id="header">
+        <h1>
+            Welcome to the Advance booking dates app for IRCTC
+        </h1>
+        <div class="slogan">"Be the first to get Confirmed Ticket"</div>
+    </div>
+     <div id="container">
+        <div id="left_sidebar">
+            <ul>
+                
+                <li>Home</li>
+                <li>IRCTC</li>
+                <li>About</li>
+            </ul>
+        </div>
+         <div id="content">
+            <div id="prfnc">
+                <h3>Choose Prefernces:</h3><br/>
+                    Traveling day:
+                            <select id="trvl_day">
+                                <option value="0">Sunday</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3" >Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5" selected=true>Friday</option>
+                                <option value="6">Saturday</option>
+                            </select>    
+                    Return Day:
+                            <select id="rtn_day">
+                                <option value="0">Sunday</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                                <option value="6">Saturday</option>
+                            </select>    
+                          <label id="lbl">Last used on </label><span id="last_used"></span>
+            </div>             
+                <div class="alg_cent">
+                    <table id="tbl">
+                         <tbody>
+                             <tr>
+                                 <th>
+                                     Booking date
+                                 </th>
+                                 <th>
+                                     Journey Date
+                                 </th>
+                                 <th>
+                                     Day
+                                 </th>
+                                 <th>
+                                     IRCTC
+                                 </th>
+                             </tr>            
+                         </tbody>
+                         
+                     </table>
+                
+            </div>
+           <noscript><h2>Javascript Required. Please enable Javscript.</h2></noscript>
+           <div id="note"><span>*Please note :</span><br/>
+                        <ul>
+                            <li>The booking dates are shown for the current and next month only.</li>
+                            <li>The dates shown are the possible dates that can be booked to get the ticket for the journey date as shown.</li>
+                            <li>The booking can only be done when that date comes.The booking time starts at 8.AM as per IRCTC.co.in</li>
+                            <li>The Journey date is 60 days(as per IRCTC advance Reservation rules) from the date of booking.</li>
+                            <li>There is no gurantee that the ticket will be a confirmed one.</li>
+                            
+                        </ul>
+            </div>
+        </div>
+     </div>
+     <div class="clearfix"></div>
+        <div id="footer">
+            <label>Copyright &copy;2014 |Developed by <a href="https://plus.google.com/+cijokb/about" target="_blank">Cijo K.B</a>|email:<a href="mailto:cijo.kb@gmail.com">cijo.kb@gmail.com</a></label>
+        </div>
+     
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
+

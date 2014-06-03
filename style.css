@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body {    
+    font: 16px arial;
+}
+
+#header{
+    border-bottom:1px solid black;
+    padding:10px;
+    }
+
+#header h1{
+    font-size:2em;
+    /*padding-left:20%;*/
+	text-align:center;
+}
+#header .slogan{
+     font-style:italic;
+     margin-top:5px;
+     padding-left:62%;
+}
+#left_sidebar{
+    float:left;
+    width:12.5%;
+}
+#left_sidebar ul{
+    padding-left:20%;
+}
+ul{
+    padding-left:10%;
+}
+
+#container{
+    background:cyan;
+    width:100%;
+ }
+
+#content{
+    background:lightgreen;
+    width:87%;
+    border:2px solid white;
+    float:left;
+    border:2px solid black;
+}
+
+#prfnc{
+    padding-left:10%;
+	padding-top:2%;
+}
+
+#lbl{
+    margin-left:50px;
+}
+
+.alg_cent{
+    text-align:center;
+    padding:10px;
+}
+
+table{
+    border-collapse:collapse;
+    margin:0 auto;
+    background:white;
+}
+td,th{
+    padding:5px;
+    border:1px dashed #ddd;
+    width:auto;
+}
+
+td{
+    color:grey;
+}
+
+.clearfix{
+    clear:both;
+}
+
+.possible td{
+    color:black;
+    background:yellow;
+}
+#footer{
+    height:10%;
+    background:#f6f6f2;
+    padding-left:60%;
+    padding-top:20px;
+ }
+
+noscript{
+    position:relative;
+    color:red;
+    left:200px;
+}
+
+#note{
+    color:red;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+#note span{
+    text-decoration:underline;
+}
