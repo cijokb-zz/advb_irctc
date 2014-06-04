@@ -4,9 +4,6 @@
 
 @media screen and (max-width: 1152px) {
     
-    #header{
-        color:lightgreen;
-    }
     body{
         font-size:0.8em;
     }
@@ -19,9 +16,7 @@
 }
 
 @media screen and (max-width: 980px) {
-    #header{
-        color:blue;
-    }
+
     body{
         font-size:0.8em;
     }
@@ -30,9 +25,6 @@
 
 @media screen and (max-width: 960px) {
     
-    #header{
-        color:red;
-    }
     body{
         font-size:0.8em;
     }
@@ -43,10 +35,6 @@
 }
 
 @media screen and (max-width: 800px) {
-    
-    #header{
-        color:yellow;
-    }
     
     #header h1{
         font-size:2em;
@@ -73,9 +61,6 @@
 
 @media screen and (max-width: 640px) {
     
-    #header{
-        color:green;
-    }
     #header h1{
         font-size:2em;
     }
@@ -109,9 +94,6 @@
 }
 
 @media screen and (max-width: 440px) {
-    #header{
-        color:cyan;
-    }
     #header h1{
         font-size:1.0em;
         /*padding-left:10%;*/
