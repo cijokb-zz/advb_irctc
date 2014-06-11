@@ -215,3 +215,75 @@ function delete_table(tb){
     }   
 }
 
+/*added on 6/9/2014
+ Functionality to read dates from txt files,csv files.
+ In txt files, the dates must seperated by ',' eg:25/10/2014,10/2/2014
+*/
+document.getElementById('calc').addEventListener("change",readText);
+
+//reading csv file
+function readText() {
+    if(this.files && this.files[0]){
+            var reader = new FileReader();
+            reader.onload = function (e) {  
+                    var output=e.target.result;
+                    output=output.split(',');
+                    book_holidays(output);
+            };
+            reader.readAsText(this.files[0]);
+    }
+}
+
+//seperating date,month,year 
+function book_holidays(file_data){
+      delete_table(tb);
+      for(var i=0;i<file_data.length;i++)
+      {
+        var hld_dts=file_data[i].split('/');
+        var hld_date=parseInt(hld_dts[0]);
+        var hld_month=parseInt(hld_dts[1]-1);
+        var hld_year=parseInt(hld_dts[2]);
+        var booked_days=pre_book(hld_month,hld_date,hld_year);//month/date/year
+        var booking_date=booked_days.date+"/"+booked_days.month+"/"+booked_days.year;
+        var jrn_date=hld_date+"/"+months[hld_month]+"/"+hld_year;
+        var bk_dt=new Date;
+        bk_dt.setMonth(hld_month);
+        bk_dt.setDate(hld_date);
+        var jrn_day=days[bk_dt.getDay()];
+        create_table(tb,booking_date,jrn_date,jrn_day,false); //create table data.
+           
+      }
+    
+}
+
+
+//finding booking date for the data from the file
+function pre_book(mn,dte,yr){
+    
+    var dt2=new Date;
+    var mn_ct=0;
+    if(mn==0){ // if jan then set mn=dec
+        yr=yr-1;
+        mn=11;
+        var pre_mnt=no_days[mn]; //dec 31
+    }
+    else{
+         var pre_mnt=no_days[mn-1];//31
+    }
+    mn_ct++;
+    console.log("pre_mnt="+pre_mnt);
+    var s=pre_mnt+dte;//31+9=40
+    s=s-no_days[mn-1];//40-30=10
+    mn_ct++;
+    
+    dt2.setFullYear(yr);
+    dt2.setMonth(mn-mn_ct); //setting month of booking
+    dt2.setDate(s);    //setting date of booking
+    
+    var book_dtls={};
+    book_dtls.year=dt2.getFullYear();
+    book_dtls.month=months[dt2.getMonth()];
+    book_dtls.day=days[dt2.getDay()];
+    book_dtls.date=dt2.getDate();
+    return book_dtls;
+}
